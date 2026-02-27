@@ -5,18 +5,22 @@ let cellSize = 20;
 
 let palette = [
   "#000000",
+  "#616161",
+  "#b5b5b5",
   "#63422d",
   "#ff595e",
+  "#ff9959",
   "#ffca3a",
   "#8ac926",
-  "#1982c4",
+  "#2f54da",
+  "#2aa4dc",
   "#6a4c93",
   "#f598dc",
-  "#ffffff"
 ];
 
 let currentColor = "#000000";
 let isEraser = false;
+
 
 function setup() {
   createCanvas(cols * cellSize, rows * cellSize + 60);
@@ -28,6 +32,7 @@ function setup() {
       grid[i][j] = "#ffffff";
     }
   }
+  
 }
 
 function draw() {
@@ -80,6 +85,7 @@ function drawPalette() {
     rect(10 + palette.length * 40 - 2, yOffset - 2, 64, 34);
     strokeWeight(1);
   }
+  
 }
 
 function mousePressed() {
